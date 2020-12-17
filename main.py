@@ -88,10 +88,10 @@ def blackjack():
   user_total=sum(user_cards)
   computer_total=sum(computer_cards)
 
-  if 11 and 10 in user_cards and len(user_cards)==2:
+  if (11,10) in user_cards and len(user_cards)==2:
     user_total=0
     print("You have won!")
-  elif 11 and 10 in computer_cards and len(computer_cards)==2:
+  elif (11,10) in computer_cards and len(computer_cards)==2:
     computer_total=0
     print("Computer has won!")
   elif user_total>21:
@@ -105,8 +105,8 @@ def blackjack():
   elif user_total==21:
       print("You have won!")
 
-  print("User's cards: "+ str(user_cards))
-  print("Computer's cards: "+ str(computer_cards))
+  print("User's cards: ", user_cards, "\nUser's Score: ", user_total)
+  print("Computer's cards: ", computer_cards, "\nComputer's Score: ", computer_total)
 
 
 #The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
